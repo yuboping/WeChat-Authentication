@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- weblogic
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>DS_LccmsServer</value>
+        </property>
+    </bean>  -->
+    
+    <!-- tomcat
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>java:comp/env/DS_LccmsServer</value>
+        </property>
+    </bean> -->
+
+<!--
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName">
+            <value>oracle.jdbc.driver.OracleDriver</value>
+        </property>
+        <property name="url">
+            <value>jdbc:oracle:thin:@192.168.97.51:1521:LCIMS8</value>
+        </property>
+        <property name="username">
+            <value>lcunp</value>
+        </property>
+        <property name="password">
+            <value>lcunp</value>
+        </property>
+        <property name="maxActive">
+            <value>50</value>
+        </property>
+    </bean> 
+    -->
+    
+    <!-- 无数据库启动 
+    <bean id="dataSource" class="com.linkage.lcunp.util.BlankDataSource" destroy-method="close">
+    
+    </bean>-->
+    
+    <!-- c3p0池 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass">
+            <value>com.sybase.jdbc3.jdbc.SybDriver</value>
+        </property>
+        <property name="jdbcUrl">
+            <value>jdbc:sybase:Tds:172.31.8.9:6001/JKUSER_SERVER?charset=eucgb</value>
+        </property>
+        <property name="user">
+            <value>useradmin</value>
+        </property>
+        <property name="password">
+            <value>useradmin</value>
+        </property>
+        <property name="acquireIncrement">
+			<value>3</value>
+		</property>
+		<property name="acquireRetryAttempts">
+			<value>30</value>
+		</property>
+		<property name="acquireRetryDelay">
+			<value>1000</value>
+		</property>
+		<property name="checkoutTimeout">
+			<value>5000</value>
+		</property>
+		<property name="idleConnectionTestPeriod">
+			<value>30</value>
+		</property>
+		<property name="initialPoolSize">
+			<value>5</value>
+		</property>
+		<property name="maxIdleTime">
+			<value>60</value>
+		</property>
+		<property name="maxPoolSize">
+			<value>30</value>
+		</property>
+    </bean> 
+    
+</beans>
+

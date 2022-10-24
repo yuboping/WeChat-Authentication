@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="wxMsgHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXMsgHandlerBOImpl">
+		<property name="wxMsgBO" ref="wxMsgBO"/>
+	</bean>	
+
+	<bean id="wxServerHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXServerHandlerBOImpl">
+		<property name="wxMsgBO" ref="wxMsgBO"/>
+		<property name="wxWifiBO" ref="wxWifiBO"/>
+		<property name="specialUserBO" ref="specialUserBO"/>
+	</bean>	
+	
+	<bean id="wxSurfNetHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXSurfNetHandlerBOImpl">
+		<property name="wxMsgBO" ref="wxMsgBO"/>
+		<property name="wxWifiBO" ref="wxWifiBO"/>
+		<property name="specialUserBO" ref="specialUserBO"/>
+	</bean>	
+	
+	<bean id="wxManagerHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXManagerHandlerBOImpl">
+		<property name="wxMsgBO" ref="wxMsgBO"/>
+		<property name="specialUserBO" ref="specialUserBO"/>
+	</bean>	
+
+	<bean id="wxSignatureCheckHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXSignatureCheckHandlerBOImpl">
+	</bean>	
+	
+	<bean id="wxWifiHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXWifiHandlerBOImpl">
+		<property name="wxWifiBO" ref="wxWifiBO"/>
+		<property name="specialUserBO" ref="specialUserBO"/>
+		<property name="memCachedBO" ref="memCachedBO"/>
+	</bean>	
+	
+	<bean id="wxVerifyHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXVerifyHandlerBOImpl">
+		<property name="wxVerifyBO" ref="wxVerifyBO"/>
+		<property name="specialUserBO" ref="specialUserBO"/>
+	</bean>
+	
+	<bean id="wxNetAuthHandlerBO" class="com.ailk.wxserver.service.handler.impl.WXNetAuthHandlerBOImpl">
+		<property name="wxNetAuthBO" ref="wxNetAuthBO"/>
+		<property name="specialUserBO" ref="specialUserBO"/>
+	</bean>
+	
+	<bean id="getWXUserHandlerBO" class="com.ailk.wxserver.service.handler.impl.GetWXUserHandlerBOImpl">
+		<property name="specialUserBO" ref="specialUserBO"/>
+	</bean>
+</beans>

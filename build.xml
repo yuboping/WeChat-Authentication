@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="lcunp" default="pack">
+	
+	<property name="web.dir" value="src/main/webapp" />
+	<property name="config.dir" value="src/main/resources" />
+	
+	<property name="dist.dir" value="e:/work/jar" />
+	<property name="dist.web.dir" value="e:/work/jar/webapps" />
+	
+	<!-- 首任务（空） -->
+	<target name="init"/>
+	
+	<!-- 编译 -->
+	<target name="compile" depends="init">
+	</target>
+	
+	<!-- 打包 -->
+	<target name="pack" depends="compile">
+		<delete dir="${dist.dir}"/>
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${dist.web.dir}" />
+		
+		<copy todir="${dist.dir}/config/ct/sh">
+			<fileset dir="${config.dir}/config/ct/sh">
+				<include name="messageshowconfig.xml" />
+			</fileset>
+		</copy>
+		<copydir dest="${dist.web.dir}/wx/netauth/SY1_SNQ1500109" src="${web.dir}/wx/netauth/SY1_SNQ1500109"/>
+		<copydir dest="${dist.web.dir}/wx/verify/SY1_SNQ1500109" src="${web.dir}/wx/verify/SY1_SNQ1500109"/>
+
+		<jar basedir="${dist.dir}" destfile="${dist.dir}/shct_wxserver_addhaigaowx_20160302.jar">
+		</jar>
+	</target>
+	
+</project>

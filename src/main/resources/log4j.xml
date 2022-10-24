@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="A1" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}]%5p%6.6r[%t]%37c %3x(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+	<appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/other/main.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d - %c -%-4r [%t] %-5p %x - %m%n" />
+		</layout>
+	</appender>
+	<appender name="Conn" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/other/conn.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="Error" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/other/error.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="Sql" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/other/sql.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="WXoperate" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/main/wxoperate.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXnetauthoperate" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/main/wxnetauthoperate.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXverifyoperate" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/main/wxverifyoperate.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXwifioperate" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/main/wxwifioperate.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="WXmsghandler" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/handler/wxmsghandler.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXnetauthhandler" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/handler/wxnetauthhandler.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXsignaturecheckhandler" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/handler/wxsignaturecheckhandler.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXverifyhandler" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/handler/wxverifyhandler.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXwifihandler" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/handler/wxwifihandler.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="Broaduser" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/base/broaduser.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="Macoperate" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/base/macoperate.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="Sms" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/base/sms.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="Specialuser" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/base/specialuser.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="Memcached" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/base/memcached.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXmsg" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/base/wxmsg.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="WXverify" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/base/wxverify.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="GetWXUserOperate" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/main/getwxuseroperate.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	<appender name="GetWXUserHandler" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="Append" value="true" />
+		<param name="File" value="${logpath}/handler/getwxuserhandler.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}][%p][%c] - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="conn">
+		<level value="info" />
+		<appender-ref ref="Conn" />
+	</logger>
+	<logger name="error">
+		<level value="info" />
+		<appender-ref ref="Error" />
+	</logger>
+	<logger name="sql">
+		<level value="debug" />
+		<appender-ref ref="Sql" />
+	</logger>
+	
+	<logger name="wxoperate">
+		<level value="info" />
+		<appender-ref ref="WXoperate" />
+	</logger>
+	<logger name="wxnetauthoperate">
+		<level value="info" />
+		<appender-ref ref="WXnetauthoperate" />
+	</logger>
+	<logger name="wxverifyoperate">
+		<level value="info" />
+		<appender-ref ref="WXverifyoperate" />
+	</logger>
+	<logger name="wxwifioperate">
+		<level value="info" />
+		<appender-ref ref="WXwifioperate" />
+	</logger>
+	
+	<logger name="wxmsghandler">
+		<level value="info" />
+		<appender-ref ref="WXmsghandler" />
+	</logger>
+	<logger name="wxnetauthhandler">
+		<level value="info" />
+		<appender-ref ref="WXnetauthhandler" />
+	</logger>
+	<logger name="wxsignaturecheckhandler">
+		<level value="info" />
+		<appender-ref ref="WXsignaturecheckhandler" />
+	</logger>
+	<logger name="wxverifyhandler">
+		<level value="info" />
+		<appender-ref ref="WXverifyhandler" />
+	</logger>
+	<logger name="wxwifihandler">
+		<level value="info" />
+		<appender-ref ref="WXwifihandler" />
+	</logger>
+	
+	<logger name="broaduser">
+		<level value="info" />
+		<appender-ref ref="Broaduser" />
+	</logger>
+	<logger name="macoperate">
+		<level value="info" />
+		<appender-ref ref="Macoperate" />
+	</logger>
+	<logger name="sms">
+		<level value="info" />
+		<appender-ref ref="Sms" />
+	</logger>
+	<logger name="specialuser">
+		<level value="info" />
+		<appender-ref ref="Specialuser" />
+	</logger>
+	<logger name="memcached">
+		<level value="info" />
+		<appender-ref ref="Memcached" />
+	</logger>
+	<logger name="wxmsg">
+		<level value="info" />
+		<appender-ref ref="WXmsg" />
+	</logger>
+	<logger name="wxverify">
+		<level value="info" />
+		<appender-ref ref="WXverify" />
+	</logger>
+	<logger name="getwxuseroperate">
+		<level value="info" />
+		<appender-ref ref="GetWXUserOperate" />
+	</logger>
+	<logger name="getwxuserhandler">
+		<level value="info" />
+		<appender-ref ref="GetWXUserHandler" />
+	</logger>
+	
+	<category name="com.ailk.lcims.support">
+		<level value="info" />
+		<appender-ref ref="FILE" />
+	</category>
+	<category name="org">
+		<level value="info" />
+		<appender-ref ref="FILE" />
+	</category>
+	
+	<root>
+		<priority value="ERROR" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</log4j:configuration>

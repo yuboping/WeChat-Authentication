@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linkage>
+
+        <config id="emergency">
+                <property name="isstartupwithoutdb" value="false"/>        <!-- 无数据库启动 -->
+                <property name="startupadaptivity" value="false"/>         <!-- 自适应启动方式 -->
+        </config>
+
+        <config id="main">
+                <property name="user_hash" value="6"></property>
+                <property name="container_name" value="weblogic"></property>
+                <property name="pool_name" value="DS_PortalServer"></property>
+                <!-- 数据库类型, 1 - oracle, 2 - sybase-->
+                <property name="database" value="2"></property>
+                <!-- jdbc配置 -->
+                <property name="driver" value="com.sybase.jdbc3.jdbc.SybDriver"></property>
+                <property name="url" value="jdbc:sybase:Tds:172.31.8.9:6001/JKUSER_SERVER?charset=eucgb"></property>
+                <property name="username" value="useradmin"></property>
+                <property name="password" value="useradmin"></property>
+                <property name="default_url" value="/"></property>
+
+                <!-- 预认证校验类型 0:数据库方式 1:gdbm方式 -->
+                <property name="preauth_type" value="0"></property>
+
+                <!-- 测试账号 -->
+                <property name="wlanportal_testuser">
+                        <value>^.*((wlanportaltestokuser)|(WD019113915928473)|(13915928473)|(18913834141)|(1790099887766)).*$</value>
+                </property>
+        </config>
+
+        <config id="sendsms">
+                <property name="url" value="http://101.95.34.53:8800/services/CommonSendSMS"></property>
+                <property name="timeout" value="3000"></property>
+        </config>
+        <!-- mac服务 -->
+        <config id="mac">
+                <property name="macsupportflag" value="true"></property>
+				<!-- mac取消绑定接口参数 -->
+				<property name="cancelbindpassword" value="wxgd32f2"></property>
+                <property name="timeout" value="3000"></property>
+                <property name="directcancelmac_url" value="http://101.95.34.53:8003/services/DirectMacCancel"></property>
+        </config>
+
+        <config id="wxauth">
+                <!-- 微信 -->
+                <property name="verify_cmd" value="^(1[0-9]{10})$"></property>
+                <property name="link_cmd" value="^8$"></property>
+                <property name="link_Surf" value="shangwang"></property>
+
+                <property name="mobilepattern" value="^1[0-9]{10}$"></property>
+
+                <!-- 密码长度 -->
+                <property name="password_length" value="8"></property>
+
+                <property name="aaa_timeout" value="4000"></property><!-- 单位毫秒 -->
+                <property name="aaa_url" value="http://172.16.146.197:7088/services/WXService"></property><!-- aaa接口url -->
+				<!-- aaa接口url 测试 
+				<property name="aaa_url" value="http://172.31.4.10:7018/services/WXService"></property>
+				-->
+                <!-- 上网认证链接有效期 -->
+                <property name="timestamp_valid" value="300000"></property><!-- 单位毫秒-->
+
+                <!-- 微信上网认证url ,该url收到请求后构造上网数据再跳转到authcodeurl，由设备重定向到portal-->
+                <property name="netauth_url" value="http://wxrz.sh.189.cn/wx/netauth?paramStr=${PARAMSTR}"></property>
+
+                <!-- 微信上网认证url，处理失败跳转url -->
+                <property name="netauth_fail_jsp_url" value="http://wxrz.sh.189.cn/wx/netauth/${ECCODE}/authfail.jsp?paramStr=${PARAMSTR}"></property>
+
+                <!-- 微信上网认证重定向url -->
+                <property name="authcode_url" value="http://www.qq.com?***authcode_token=${AUTHCODE_TOKEN}***"></property>
+				
+                <!-- 微信认证参数接口,重定向的url需要的参数获取接口，post请求  -->
+                <property name="authcode_param_url" value="http://101.95.34.49/wxservlet"></property>
+				<!--  测试接口地址
+				<property name="authcode_param_url" value="http://101.95.34.50/wxservlet"></property>
+				-->
+				<!-- 正式环境地址，https://wlan.ct10000.com/wxservlet， https://101.95.34.49/wxservlet， http://101.95.34.49/wxservlet  -->
+				
+				<!-- 微信认证参数接口,重定向的url需要的参数获取接口，post请求  -->
+				<property name="authcode_param_url" value="http://101.95.34.49/wxservlet"></property>
+				
+				<!-- 微信网页授权,获取code URL -->
+				<property name="connect_oauth2_authorize_url" value="https://open.weixin.qq.com/connect/oauth2/authorize?appid=${APPID}&amp;redirect_uri=http://wxrz.sh.189.cn/wx/surfnet&amp;response_type=code&amp;scope=snsapi_base&amp;state=${STATE}#wechat_redirect"></property>
+				
+				<!-- 微信网页授权,通过code换取网页授权access_token URL -->
+				<property name="oauth2_access_token_url" value="https://api.weixin.qq.com/sns/oauth2/access_token?appid=${APPID}&amp;secret=${SECRET}&amp;code=${CODE}&amp;grant_type=authorization_code"></property>
+				
+				<!-- 微信营销提交手机号  URL -->
+				<property name="wechat_manager_phone_url" value="http://www.yaxin-nanjing.com/wxAuth/authPhone.do?registerid=${REGISTERID}&amp;openid=${OPENID}&amp;phone=${PHONE}"></property>		
+        </config>
+
+        <config id="wxverify">
+                <!-- 验证码或者验证链接有效期 -->
+                <property name="timestamp_valid" value="300000"></property><!-- 单位毫秒-->
+
+                <!-- 验证失效时长 -->
+                <property name="verifyexpire" value="720"></property><!-- 单位小时 -->
+
+                <!-- 微信公众号通过短信下发验证链接 -->
+                <property name="verify_link" value="http://wxrz.sh.189.cn/wx/vf?vt=${VERIFYTYPE}&amp;vc=${VERIFYCODE}"></property>
+
+                <!-- 页面上获取短信验证码长度 -->
+                <property name="verifycode_length" value="6"></property>
+
+                <!-- 微信wifi验证url -->
+                <property name="verify_jsp_url" value="http://wxrz.sh.189.cn/wx/verify/${ECCODE}/verify.jsp?paramStr=${PARAMSTR}"></property>
+
+                <!-- 微信手机号验证失败页面 -->
+                <property name="verifyfail_jsp_url" value="http://wxrz.sh.189.cn/wx/verify/${ECCODE}/verify_fail.jsp?paramStr=${PARAMSTR}"></property>
+        </config>
+        <config id="wxwifi">
+                <!-- 微信wifi认证url -->
+                <property name="wxwifi_auth_url" value="http://wxrz.sh.189.cn/wx/wifi?wifireq=wifiauth"></property>
+
+				<!-- 微信wifi校验url -->
+				<property name="wxwifi_check_url" value="http://prowifi.js165.com/wx/wifi?wifireq=wificheck"></property>
+				
+                <!-- 微信wifi失败url -->
+                <property name="wxwifi_fail_jsp_url" value="http://wxrz.sh.189.cn/wx/wifi/${ECCODE}/wifi_fail.jsp?paramStr=${PARAMSTR}"></property>
+
+                <!-- 保存内存库有效期，1小时有效 -->
+                <property name="mem_expired" value="3600000"></property><!-- 单位毫秒-->
+        </config>
+        <config id="getwxuser">
+                <!-- 超时时间，单位毫秒 -->
+                <property name="timeout" value="15000"></property>
+
+                <!-- ip限制 -->
+                <property name="permitip" value="192.168.1.1;192.168.1.2;180.110.208.4;101.95.34.52;61.132.160.203;101.95.34.52"></property>
+        </config>
+        <config id="auth_from_menu">
+                <!-- 需要从菜单提示消息认证的公众号 -->
+                <property name="eccodes" value="JK000081_JK000081;JK000089_JK000089;JK000069_JK000069;JK000097_JK000097;JK000099_JK000099;JK000112_JK000112;JK000111_JK000111;JK000095_weixin;otherecocode"></property>
+
+                <!-- 菜单认证公众号的菜单，对应的key值 -->
+                <property name="JK000081_JK000081" value="clickToMessage"></property>
+                <property name="JK000089_JK000089" value="AUTHENTICATE_V001"></property>
+                <property name="JK000069_JK000069" value="jinhongqiao001"></property>
+                <property name="JK000097_JK000097" value="bsshangwang"></property>
+                <property name="JK000099_JK000099" value="lbgcshangwang"></property>
+                <property name="JK000112_JK000112" value="mlzshangwang"></property>
+                <property name="JK000111_JK000111" value="zjxlshangwang"></property>
+                <property name="JK000095_weixin" value="JUKANGYIYUAN_V001"></property>
+        </config>
+
+        <!-- 如果能带uncode，id=thirdparty+uncode -->
+        <config id="thirdpartyyaxintestyaxintest">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="true"></property>
+				<property name="appsecret" value="08c96767ea24fcd6112d07b0cb56c8fa"></property>
+        </config>
+        <!--测试环境的uncode -->
+        <!-- <config id="thirdpartycs999000">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="true"></property>
+                <property name="appsecret" value="08c96767ea24fcd6112d07b0cb56c8fa"></property>
+        </config> -->
+        <config id="thirdpartygh_7ce3ef227b96">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="true"></property>
+        </config>
+        <config id="thirdpartytq1234">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="true"></property>
+        </config>
+        <config id="thirdpartytq1122">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="true"></property>
+        </config>
+        <config id="thirdpartytq0712">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="true"></property>
+        </config>
+        <config id="thirdpartywz0108">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="true"></property>
+        </config>
+        <!-- 如果不能带uncode，默认不加密 -->
+        <config id="thirdparty">
+                <property name="encodeKey" value="uionhappy"></property>
+                <property name="needDes3" value="false"></property>
+        </config>
+
+
+</linkage>

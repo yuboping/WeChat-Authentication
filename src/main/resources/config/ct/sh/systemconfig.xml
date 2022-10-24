@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linkage>
+
+	<config id="main">
+		<property name="base_path" value="/lcims/support70/wxserver/config" />
+		<property name="operator" value="ct" />
+		<property name="province" value="sh" />
+		<property name="version" value="1.0.0" />
+	</config>	
+	<config id="business_config">
+		<property name="file_name" value="businessconfig.xml" />
+	</config>	
+	<config id="mp_config">
+		<property name="file_name" value="mpconfig.xml" />
+	</config>
+	<config id="messageshow_config">
+		<property name="file_name" value="messageshowconfig.xml" />
+	</config>	
+	<config id="webconsole_config">
+		<property name="file_name" value="webconsoleconfig.xml" />
+	</config>
+</linkage>

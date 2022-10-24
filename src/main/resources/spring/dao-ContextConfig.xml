@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- mpdao -->
+	<bean id="dEnterpriseRegisterDAO" class="com.ailk.wxserver.dao.mp.impl.DefaultMPDAOImpl">
+		<property name="tableName" value="D_ENTERPRISE_REGISTER" />
+		<property name="poClassname" value="com.ailk.wxserver.po.DEnterpriseRegister" />
+		<property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+	</bean>
+	<bean id="dQrcodeGroupDAO" class="com.ailk.wxserver.dao.mp.impl.DefaultMPDAOImpl">
+		<property name="tableName" value="D_QRCODE_GROUP" />
+		<property name="poClassname" value="com.ailk.wxserver.po.DQrcodeGroup" />
+		<property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>
+	</bean>
+	
+	<bean id="specialUserDAO" class="com.ailk.wxserver.dao.impl.SpecialUserDAOImpl">
+		<property name="dataSource">
+            <ref bean="dataSource"/>
+        </property>	
+	</bean>
+</beans>
+

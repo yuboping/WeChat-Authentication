@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mps>
+	<!-- config -->
+	<mp id="systemConfigMP" class="com.ailk.wxserver.memorycache.service.config.impl.SystemConfigMPImpl" namespace="/portal/config/system" />
+	<mp id="businessConfigMP" class="com.ailk.wxserver.memorycache.service.config.impl.BusinessConfigMPImpl" namespace="/portal/config/business" />
+	<mp id="webconsoleConfigMP" class="com.ailk.wxserver.memorycache.service.config.impl.WebconsoleConfigMPImpl" namespace="/portal/config/webconsole" />
+	<mp id="messageShowConfigMP" class="com.ailk.wxserver.memorycache.service.config.impl.MessageShowConfigMPImpl" namespace="/portal/config/messageshow" />
+</mps>

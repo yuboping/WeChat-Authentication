@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linkage>
+	<!-- 初始化结果信息 -->
+
+	<config id="initshow">
+		<property name="weixin_show" value="default"><![CDATA[]]></property>
+	</config>
+
+	<config id="weixin_show">
+		<property name="show" value="1"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！如果已验证用户需上网，请点击“免费上网”获取上网链接！]]></property>
+		<property name="show" value="2"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}首次使用请回复手机号获取验证短信，如：18999999999]]></property>
+		<property name="show" value="3"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}您手机号码验证已经过期，请重新回复手机号获取验证短信重新验证，如：18999999999]]></property>
+		<property name="show" value="4"><![CDATA[【${TIME}】微信取消关注成功！]]></property>
+		<property name="show" value="5"><![CDATA[【${TIME}】微信取消关注失败！]]></property>
+		<property name="show" value="6"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}1.首次使用请回复手机号获取验证短信，如：18999999999${NEWLINE}2.如果已验证用户需上网，请点击“免费上网”获取上网链接！]]></property>
+		<property name="show" value="7"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}您已经验证通过，请点击“免费上网”获取上网链接！]]></property>
+		<property name="show" value="8"><![CDATA[【${TIME}】尊敬的用户，验证短信已发送，请注意查收，并按提示点击链接即可完成验证！${NEWLINE}如果1分钟还未收到短信，请再次输入手机号验证！]]></property>
+		<property name="show" value="9"><![CDATA[【${TIME}】尊敬的用户，系统繁忙，验证短信下发失败，请稍后重试！]]></property>
+		<property name="show" value="10"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}<a href="${URL}">点击上网</a>${NEWLINE}此链接5分钟内有效]]></property>
+		<property name="show" value="11"><![CDATA[【${TIME}】尊敬的用户，您验证手机号有问题，请输入正确手机号进行验证！]]></property>
+		<property name="show" value="13"><![CDATA[【${TIME}】微信上网认证：${URL}。]]></property>
+		<property name="show" value="14"><![CDATA[【${TIME}】尊敬的用户，认证短信已发送，请注意查收!${NEWLINE}请查看认证短信，并按提示点击链接即可完成认证！${NEWLINE}如果1分钟还未收到短信，请重新点击“免费上网”获取上网链接！]]></property>
+		<property name="show" value="15"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}请确认您已连接至FreeWiFi_Quick${NEWLINE}首次使用请回复手机号获取验证短信，如：18999999999${NEWLINE}如您已经验证过手机号，请回复 8 获取上网链接。]]></property>
+		<!-- 空消息16 -->
+		<property name="show" value="16"><![CDATA[]]></property>
+		<property name="show" value="90"><![CDATA[【${TIME}】尊敬的用户，欢迎关注公众号！系统出现问题，请联系客服！]]></property>
+		<property name="show" value="98"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}系统繁忙，请稍后再试！]]></property>
+		<property name="show" value="99"><![CDATA[【${TIME}】尊敬的用户，欢迎关注公众号！系统异常，请联系客服！]]></property>
+	</config>
+
+	<config id="CS999000_CS999002_weixin_show">
+		<property name="show" value="7"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}您已经验证通过，请回复8获取上网链接！]]></property>
+		<property name="show" value="10"><![CDATA[【${TIME}】请确认您已连接FreeWiFi_Quick无线网络${NEWLINE}<a href="${URL}">点击免费上网</a>${NEWLINE}此链接5分钟内有效]]></property>
+		<property name="show" value="15"><![CDATA[尊敬的用户，欢迎关注“智慧科创尽在掌握”！本服务号主要介绍互联网+科创方面的信息，您可以通过下方菜单栏获取以下内容：${NEWLINE}【科创信息】创新创业相关政策、资源等；${NEWLINE}【优惠活动】中国电信的业务及活动信息；${NEWLINE}【缤纷生活】智慧城市和生活服务信息。${NEWLINE}如需帮助，请直接留言。]]></property>
+	</config>
+
+	<config id="JK000081_JK000081_weixin_show">
+		<property name="show" value="2"><![CDATA[【${TIME}】尊敬的用户，欢迎使用云间服务免费WiFi！${NEWLINE}首次使用请回复手机号获取验证短信，如：18999999999]]></property>
+		<property name="show" value="7"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}您已经验证通过，请回复8获取上网链接！]]></property>
+		<property name="show" value="10"><![CDATA[【${TIME}】请确认您已连接i-songjiang无线网络${NEWLINE}<a href="${URL}">点击免费上网</a>${NEWLINE}>此链接5分钟内有效]]></property>
+		<property name="show" value="15"><![CDATA[NULL]]></property>
+	</config>
+
+
+	<!-- i-gaoqiao的个性化配置消息 -->
+	<config id="JK000089_JK000089_weixin_show">
+		<property name="show" value="2"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！请确认您已连接至i-gaoqiao热点下，${NEWLINE}首次使用请回复手机号获取验证短信，如：18999999999]]></property>
+		<property name="show" value="7"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}您已经验证通过，请回复8获取上网链接！]]></property>
+		<property name="show" value="10"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！请确认您已连接至i-gaoqiao热点下，${NEWLINE}<a href="${URL}">点击上网</a>${NEWLINE}此链接5分钟内有效]]></property>
+		<property name="show" value="15"><![CDATA[感谢您对潮涌高桥的关注！这里是上海市浦东新区高桥镇人民政府微信公众平台。这里发布的有高桥镇权威、及时、“高大上”的政务、新闻类信息，也有新鲜、好玩、“接地气”的生活、便民服务类信息。我们正向着引领转型的“创新高桥”、生态便捷的“宜居高桥”、文明和谐的“古镇高桥”努力着！您的需要小桥来实现，这里就是您的高桥新闻小秘书。欢迎您对高桥发展和生活的各种分享及建议。]]></property>
+	</config>
+
+
+    <!-- dongyuanlibao的个性化配置消息 -->
+	<config id="JK000099_JK000099_weixin_show">
+		<property name="show" value="15"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}请确认您已连接至Chinanet-Libao${NEWLINE}首次使用请回复手机号获取验证短信，如：18999999999${NEWLINE}如您已经验证过手机号，请回复 8 获取上网链接。]]></property>
+	</config>
+
+
+	<config id="SY1_SNQ1500109_weixin_show">
+		<property name="show" value="7"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}您已经验证通过，请回复8获取上网链接！]]></property>
+		<property name="show" value="10"><![CDATA[【${TIME}】请确认您已连接Wi-Fi热点无线网络${NEWLINE}<a href="${URL}">点击免费上网</a>${NEWLINE}此链接5分钟内有效]]></property>
+		<property name="show" value="15"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}请确认您已连接至Wi-Fi热点${NEWLINE}首次使用请回复手机号获取验证短信，如：18999999999${NEWLINE}如您已经验证过手机号，请回复 8 获取上网链接。]]></property>
+	</config>
+
+    <!-- junkang的个性化配置消息 -->
+    <config id="JK000095_weixin_weixin_show">
+		<property name="show" value="7"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}您已经验证通过，请回复8获取上网链接！]]></property>
+		<property name="show" value="10"><![CDATA[【${TIME}】请确认您已连接junkang_free无线网络${NEWLINE}<a href="${URL}">点击免费上网</a>${NEWLINE}此链接5分钟内有效]]></property>
+		<property name="show" value="15"><![CDATA[【${TIME}】尊敬的用户，欢迎使用免费WiFi！${NEWLINE}请确认您已连接至junkang_free${NEWLINE}首次使用请回复手机号获取验证短信，如：18999999999${NEWLINE}如您已经验证过手机号，请回复 8 获取上网链接。]]></property>
+	</config>
+
+	<config id="weixin_sms_show">
+		<property name="show" value="1"><![CDATA[微信验证：${URL}，请点击验证。]]></property>
+		<property name="show" value="2"><![CDATA[微信上网验证码：${VERIFYCODE}。]]></property>
+	</config>
+
+	<config id="weixin_verify_show">
+		<property name="show" value="0">尊敬的用户，验证成功！</property>
+		<property name="show" value="1"><![CDATA[尊敬的用户，请求参数有问题，请稍后重试！详情联系客服！]]></property>
+		<property name="show" value="2"><![CDATA[尊敬的用户，验证失败！验证已失效或者过期,请重新验证！]]></property>
+		<property name="show" value="3"><![CDATA[尊敬的用户，验证失败！验证已失效或者过期,请重新验证！]]></property>
+		<property name="show" value="4"><![CDATA[尊敬的用户，验证失败！验证已失效或者过期,请重新验证！]]></property>
+		<property name="show" value="98"><![CDATA[尊敬的用户，验证失败！系统繁忙，请稍后重试！]]></property>
+		<property name="show" value="99"><![CDATA[尊敬的用户，验证失败！系统异常，请稍后重试！]]></property>
+	</config>
+
+	<config id="weixin_vf_gettoken_show">
+		<property name="show" value="0"><![CDATA[尊敬的用户，验证码已通过短信发送到您的手机中,验证码5分钟有效。如果1分钟内未收到短信，请重新操作获取验证码。]]></property>
+		<property name="show" value="1"><![CDATA[尊敬的用户，请求参数有问题，请稍后重试！详情联系客服！]]></property>
+		<property name="show" value="2"><![CDATA[尊敬的用户，不存在微信公众号配置。详询客服！]]></property>
+		<property name="show" value="3"><![CDATA[尊敬的用户，您尚未关注该公众号！请先关注公众号！]]></property>
+		<property name="show" value="4"><![CDATA[尊敬的用户，下发短信失败，请稍后重试！详询客服！]]></property>
+		<property name="show" value="5"><![CDATA[尊敬的用户，你已经验证过，不需要验证！]]></property>
+		<property name="show" value="6"><![CDATA[尊敬的用户，微信认证业务暂停。详询客服！]]></property>
+		<property name="show" value="98"><![CDATA[尊敬的用户，系统繁忙，请稍后重试！详情联系客服！]]></property>
+		<property name="show" value="99"><![CDATA[尊敬的用户，系统异常，请稍后重试！详情联系客服！]]></property>
+	</config>
+	<config id="weixin_wifi_show">
+		<property name="show" value="1"><![CDATA[尊敬的用户，请求参数有问题，请稍后重试！详情联系客服！]]></property>
+		<property name="show" value="2"><![CDATA[尊敬的用户，不存在微信公众号配置。详询客服！]]></property>
+		<property name="show" value="3"><![CDATA[尊敬的用户，您尚未关注该公众号！请先关注公众号！]]></property>
+		<property name="show" value="99"><![CDATA[尊敬的用户，系统异常，请稍后重试！详询客服！]]></property>
+	</config>
+
+	<config id="weixin_netauth_show">
+		<property name="show" value="0">尊敬的用户，直接跳转到portal认证！</property>
+		<property name="show" value="1"><![CDATA[尊敬的用户，请求参数有问题，请稍后重试！详情联系客服！]]></property>
+		<property name="show" value="2"><![CDATA[尊敬的用户，不存在微信公众号配置。详询客服！]]></property>
+		<property name="show" value="3"><![CDATA[尊敬的用户，您尚未关注该公众号！请先关注公众号！]]></property>
+		<property name="show" value="4"><![CDATA[尊敬的用户，您尚未验证手机号！请先手机号验证！]]></property>
+		<property name="show" value="5"><![CDATA[尊敬的用户，您手机号验证已过期！请重新手机号验证！]]></property>
+		<property name="show" value="6"><![CDATA[上网链接已过期，请重新在公众号内获取上网链接认证或者微信认证。]]></property>
+		<property name="show" value="7"><![CDATA[尊敬的用户，微信认证业务暂停。详询客服！]]></property>
+		<property name="show" value="98"><![CDATA[尊敬的用户，系统繁忙，请稍后重试！详情联系客服！]]></property>
+		<property name="show" value="99"><![CDATA[尊敬的用户，系统异常，请稍后重试！详询客服！]]></property>
+	</config>
+
+</linkage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mps>
+	<!-- 排序保持与data一致 -->
+	<!-- config -->
+	<import file="mp/config.xml"/>
+	
+	<!-- database -->
+	<mp id="dEnterpriseRegisterMP" class="com.ailk.wxserver.memorycache.service.database.impl.DEnterpriseRegisterMPImpl" namespace="/portal/dEnterpriseRegister" />
+	
+	<mp id="dQrcodeGroupMP" class="com.ailk.wxserver.memorycache.service.database.impl.DQrcodeGroupMPImpl" namespace="/portal/dQrcodeGroup" />
+</mps>

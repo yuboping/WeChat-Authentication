@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<bean id="wxOperateBO" class="com.ailk.wxserver.service.main.impl.WXOperateBOImpl">
+		<property name="wxSignatureCheckHandlerBO" ref="wxSignatureCheckHandlerBO"></property>
+		<property name="wxMsgHandlerBO" ref="wxMsgHandlerBO"></property>
+	</bean>
+	
+	<bean id="wxServerOperateBO" class="com.ailk.wxserver.service.main.impl.WXServerOperateBOImpl">
+		<property name="wxServerHandlerBO" ref="wxServerHandlerBO"></property>
+	</bean>
+	
+	<bean id="wxSurfNetOperateBO" class="com.ailk.wxserver.service.main.impl.WXSurfNetOperateBOImpl">
+		<property name="wxSurfNetHandlerBO" ref="wxSurfNetHandlerBO"></property>
+	</bean>
+	
+	<bean id="wxManagerOperateBO" class="com.ailk.wxserver.service.main.impl.WXManagerOperateBOImpl">
+		<property name="wxManagerHandlerBO" ref="wxManagerHandlerBO"></property>
+	</bean>
+	
+	<bean id="refreshProcessBO" class="com.ailk.wxserver.service.main.impl.RefreshProcessBOImpl">
+	</bean>
+	
+	<bean id="wxWifiOperateBO" class="com.ailk.wxserver.service.main.impl.WXWifiOperateBOImpl">
+		<property name="wxWifiHandlerBO" ref="wxWifiHandlerBO"/>
+	</bean>
+	
+	<bean id="wxVerifyOperateBO" class="com.ailk.wxserver.service.main.impl.WXVerifyOperateBOImpl">
+		<property name="wxVerifyHandlerBO" ref="wxVerifyHandlerBO"/>
+	</bean>
+	
+	<bean id="wxNetAuthOperateBO" class="com.ailk.wxserver.service.main.impl.WXNetAuthOperateBOImpl">
+		<property name="wxNetAuthHandlerBO" ref="wxNetAuthHandlerBO"/>
+	</bean>
+	
+	<bean id="getWXUserOperateBO" class="com.ailk.wxserver.service.main.impl.GetWXUserOperateBOImpl">
+		<property name="getWXUserHandlerBO" ref="getWXUserHandlerBO"/>
+	</bean>
+	
+</beans>

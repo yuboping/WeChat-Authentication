@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linkage>
+	<config id="iplimit">
+		<property name="ip">
+			<value>127.0.0.1</value>
+			<value>192.168.97.153</value>
+			<value>192.168.97.51</value>
+			<value>192.168.97.60</value>
+			<value>172.133.79.98</value>
+			<value>172.133.79.99</value>
+			<value>172.133.81.11</value>
+			<value>172.133.81.12</value>
+			<value>172.133.79.53</value>
+		</property>
+	</config>
+	<config id="command">
+		<property name="rule">
+			<value>^\w+(\(((\w+(=(\w+)(\|\w+)*)*)(,\w+(=(\w+)(\|\w+)*)*)*)?\))?$</value>
+		</property>
+	</config>
+	
+	<config id="config">
+		<property name="SystemConfig" value="systemConfig">
+		</property>		
+		<property name="BusinessConfig" value="businessConfig">
+		</property>		
+		<property name="MessageshowConfig" value="messageshowConfig">
+		</property>
+		<property name="WebconsoleConfig" value="webconsoleConfig">
+		</property>
+	</config>
+	
+	<config id="mp">
+		<property name="DEnterpriseRegister" value="dEnterpriseRegister">
+		</property>
+		<property name="DQrCodeGroup" value="dQrcodeGroup">
+		</property>
+	</config>
+</linkage>

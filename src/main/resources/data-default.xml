@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datas>
+	<!-- 
+	 默认：容器初始化调用Builder，对象所有数据的dataconfig 
+	 扩展：自定义Builder 
+	 排序按依赖关系先后 
+	-->
+	
+	<!-- 配置文件-->
+	<data id="systemConfig">
+		<build class="com.ailk.lcims.support.mp.build.CommonBuilder" />
+		<dao id="systemConfigReader" method="getConfig" />
+	</data>
+	<data id="mpConfig">
+		<build class="com.ailk.lcims.support.mp.build.CommonBuilder" />
+		<dao id="mpConfigReader" method="getConfig" />
+	</data>
+	<data id="businessConfig">
+		<build class="com.ailk.lcims.support.mp.build.CommonBuilder" />
+		<dao id="businessConfigReader" method="getConfig" />
+	</data>
+	<data id="webconsoleConfig">
+		<build class="com.ailk.lcims.support.mp.build.CommonBuilder" />
+		<dao id="webconsoleConfigReader" method="getConfig" />
+	</data>
+	<data id="messageshowConfig">
+		<build class="com.ailk.lcims.support.mp.build.CommonBuilder" />
+		<dao id="messageshowConfigReader" method="getConfig" />
+	</data>
+	
+	<!-- 数据源 -->
+	
+	<data id="dEnterpriseRegister">
+		<build class="com.ailk.lcims.support.mp.build.CommonBuilder" />
+		<dao id="dEnterpriseRegisterDAO" method="getAll" />
+	</data>
+	<data id="dQrcodeGroup">
+		<build class="com.ailk.lcims.support.mp.build.CommonBuilder" />
+		<dao id="dQrcodeGroupDAO" method="getAll" />
+	</data>
+</datas>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="systemConfigReader" class="com.ailk.wxserver.util.config.impl.MyBaseConfigImpl">
+		<property name="xmlFile" value="lcunp_config" />
+		<property name="type" value="2" />
+	</bean>
+	
+	
+	<bean id="mpConfigReader" class="com.ailk.wxserver.util.config.impl.MyBaseConfigImpl">
+		<property name="xmlFile" value="mp_config" />
+		<property name="type" value="1" />
+	</bean>
+	
+	<bean id="businessConfigReader" class="com.ailk.wxserver.util.config.impl.MyBaseConfigImpl">
+		<property name="xmlFile" value="business_config" />
+		<property name="type" value="1" />
+	</bean>
+	
+	<bean id="webconsoleConfigReader" class="com.ailk.wxserver.util.config.impl.MyBaseConfigImpl">
+		<property name="xmlFile" value="webconsole_config" />
+		<property name="type" value="1" />
+	</bean>
+	
+	<bean id="messageshowConfigReader" class="com.ailk.wxserver.util.config.impl.MyBaseConfigImpl">
+		<property name="xmlFile" value="messageshow_config" />
+		<property name="type" value="1" />
+	</bean>
+
+</beans>

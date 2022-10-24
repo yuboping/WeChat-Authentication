@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<linkage>
+	<config id="main">
+		<property name="persist_path">
+			<value type="1">${base_path}</value>
+		</property>
+	</config>
+
+</linkage>

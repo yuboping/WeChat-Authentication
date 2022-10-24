@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<bean id="wxMsgBO" class="com.ailk.wxserver.service.base.impl.WXMsgBOImpl">
+		<property name="specialUserBO" ref="specialUserBO"/>
+		<property name="wxVerifyBO" ref="wxVerifyBO"/>
+		<property name="wxNetAuthBO" ref="wxNetAuthBO"/>
+	</bean>
+	
+	<bean id="wxWifiBO" class="com.ailk.wxserver.service.base.impl.WXWifiBOImpl">
+	</bean>
+	
+	<bean id="wxVerifyBO" class="com.ailk.wxserver.service.base.impl.WXVerifyBOImpl">
+		<property name="memCachedBO" ref="memCachedBO"/>
+		<property name="specialUserBO" ref="specialUserBO"/>
+		<property name="smsBO" ref="smsBO"/>
+	</bean>
+	
+	<bean id="wxNetAuthBO" class="com.ailk.wxserver.service.base.impl.WXNetAuthBOImpl">
+	</bean>
+	
+	<bean id="smsBO" class="com.ailk.wxserver.local_ctsh.service.base.impl.SMSBOImpl">
+	</bean>
+	
+	<bean id="memCachedBO" class="com.ailk.wxserver.service.base.impl.MemCachedBOImpl">
+		<property name="memCachedClient" ref="memCachedClient"></property>
+	</bean>
+	
+	<bean id="broadUserBO" class="com.ailk.wxserver.local_ctsh.service.base.impl.BroadUserBOImpl">
+	</bean>
+	
+	<bean id="macOperateBO" class="com.ailk.wxserver.local_ctsh.service.base.impl.MacOperateBOImpl">
+	</bean>
+	
+	<bean id="specialUserBO" class="com.ailk.wxserver.service.base.impl.SpecialUserBOImpl">
+		<property name="specialUserDAO" ref="specialUserDAO"></property>
+		<property name="broadUserBO" ref="broadUserBO"></property>
+		<property name="macOperateBO" ref="macOperateBO"></property>
+	</bean>
+</beans>
